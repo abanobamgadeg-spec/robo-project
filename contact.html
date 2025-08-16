@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - My Restaurant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">My Restaurant</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contact Form -->
+<div class="container my-5">
+  <h1>Contact Us</h1>
+  <form id="contactForm">
+    <div class="mb-3">
+      <label>Name</label>
+      <input type="text" class="form-control" id="name">
+    </div>
+    <div class="mb-3">
+      <label>Email</label>
+      <input type="email" class="form-control" id="email">
+    </div>
+    <div class="mb-3">
+      <label>Phone</label>
+      <input type="tel" class="form-control" id="phone">
+    </div>
+    <div class="mb-3">
+      <label>Message</label>
+      <textarea class="form-control" id="message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 My Restaurant. All rights reserved.
+</footer>
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $("#contactForm").submit(function(e){
+    e.preventDefault();
+    if($("#name").val() === "") { alert("The Name field is required"); return; }
+    if($("#email").val() === "") { alert("The Email field is required"); return; }
+    if($("#phone").val() === "") { alert("The Phone field is required"); return; }
+    if($("#message").val() === "") { alert("The Message field is required"); return; }
+    alert("Form submitted successfully!");
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
